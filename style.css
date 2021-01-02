@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --VeryDarkGrayishBlue: hsl(221, 19%, 35%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+body {
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--LightGrayishBlue);
+}
+
+/******************* MAIN STYLING *******************/
+main {
+    display: flex;
+    align-items: center;
+    width: 65vw;
+    height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/********************* TEXT FORMATTING *********************/
+h1, h3 {
+    color: var(--VeryDarkGrayishBlue) ;
+}
+h3:nth-child(2) {
+    color: var(--DesaturatedDarkBlue);
+    font-weight: 500;
+    word-spacing: 1px;
+    letter-spacing: .5px;
+    margin-top: 3px;
+}
+p {
+    color: var(--DesaturatedDarkBlue);
+    font-size: 1rem;
+    padding: 24px 0;
+    line-height: 1.7em;
+}
+
+/********************** DIVS STYLING **********************/
+div.drawer-container {
+    width: 40%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 2px;
+}
+img.drawer {
+    /* position: relative; */
+    /* bottom: -1px; */
+    width: 122%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+div.container-2 {
+    width: 60%;
+    max-width: 100%;
+    background-color: #FFFFFF;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+div.body-text {
+    padding: 6% 9% 0;
+}
+
+/********************* FOOTER REGION *********************/
+div.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 37px;
+    padding: 0 9% 7%;
+}
+div.user-all-info {
+    display: flex;
+}
+div.avatar-container img{
+    border-radius: 100%;
+    width: 52px;
+}
+div.user-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    align-self: center;
+}
+nav.social-links {
+    display: none;
+}
+div.share-button {
+    background-color: var(--LightGrayishBlue);
+    border-radius: 100%;
+    padding: 10px;
+}
+div.share-button img {
+    width: 20px;
+}
+.attribution { 
+    display: none;
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/********************** LIST STYLING & LINKS **********************/
+li {
+    list-style: none;
+    display: inline-block;
+}
+ul a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/******************* MOBILE RESPONSIVENESS *******************/
+@media screen and (max-width: 414px) {
+    main {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px 14px;
+    }
+    div.drawer-container {
+        position:unset;
+        height: 29%;
+    }
+    div.drawer-container, div.container-2 {
+        width: 100%;
+    }
+    img.drawer {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 100%;
+    }
+    div.container-2 {
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0;
+    }
+    h1 {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+    p {
+        padding: 1rem 0 3rem;
+    }
+    div.body-text {
+        padding: 10% 9% 0;
+    }
+    div.share-button img {
+        width: 15px;
+    }
+    nav.social-links {
+        padding: 6% 9%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--VeryDarkGrayishBlue);
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        transform: translateY(-5.4rem);
+    }
+    ul {
+        margin-right: 6em;
+    }
+    ul a {
+        letter-spacing: 6px;
+        color:hsl(212, 23%, 69%);
+    }
+    ul li {
+        padding: 6px;
+    }
+    ul li:first-child {
+        position: relative;
+        bottom: 7px;
+        font-size: 15px;
+    }
+    ul li img {
+        width: 23px;
+    }
+}
